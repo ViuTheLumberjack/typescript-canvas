@@ -3,13 +3,9 @@
 This project has been created using **webpack-cli**, you can now run
 
 ```
-npm run build
+npm run init
 ```
 
-or
+to install all the dependancies.
 
-```
-yarn build
-```
-
-to bundle your application
+Builded with much care during the Multimedia Production and Design course. 

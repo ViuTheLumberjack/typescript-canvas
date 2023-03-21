@@ -21,5 +21,26 @@ export class Drawing{
 
     constructor(){
         console.log("Drawing constructor");
+        this.addListeners();
+    }
+
+    private addListeners = () => {
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("LOADED");
+            this.root = document.body;
+            this.canvas = this.getCanvas();
+        });
+    }
+
+    private getCanvas(): HTMLCanvasElement | null {
+        if(this.canvas != null){
+            return this.canvas;
+        }
+
+        let controlsHeight: number = document.getElementById("controls").offsetHeight;
+        this.canvas = document.createElement("canvas");
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight - controlsHeight - 20;
+        this.root.prepend(this.canvas);
     }
 }
