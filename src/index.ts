@@ -1,1 +1,3 @@
-console.log("Hello World!");
+import {Drawing} from "./drawing";
+
+const drawing = new Drawing();
