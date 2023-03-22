@@ -24,7 +24,7 @@ export class Drawing{
         this.addListeners();
     }
 
-    private _addListeners = () => {
+    private addListeners = () => {
         document.addEventListener("DOMContentLoaded", () => {
             console.log("LOADED");
             this.root = document.body;
@@ -58,14 +58,6 @@ export class Drawing{
         if(fineastraCOnferma){
             this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         }
-    }
-
-    public get addListeners() {
-        return this._addListeners;
-    }
-    
-    public set addListeners(value) {
-        this._addListeners = value;
     }
 
     private getCanvas(): HTMLCanvasElement | null {
